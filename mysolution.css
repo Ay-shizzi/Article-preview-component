@@ -1,0 +1,214 @@
+ @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&family=Manrope:wght@500;700&display=swap');
+
+ :root{
+    ---Very-Dark-Grayish-Blue: hsl(217, 19%, 35%);
+    ---Desaturated-Dark-Blue: hsl(214, 17%, 51%);
+    ---Grayish-Blue: hsl(212, 23%, 69%);
+    ---Light-Grayish-Blue: hsl(210, 46%, 95%);
+    ---white: hsl(0, 0%, 100%);
+    ---Font-size: 13px;
+ }
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+ body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: 'Manrope', sans-serif;
+    font-size: var(---Font-size);
+    background-color: var(---Grayish-Blue);
+ }
+ .container{
+    display: grid;
+    grid-template-columns: 1.5fr 2fr;
+    width: 700px;
+    border-radius: 10px;
+    background-color: var(---white);
+    position: relative;
+ }
+ .illustration{
+    background-image: url(./images/drawers.jpg);
+    background-size: contain;
+    background-position: center;
+    background-size: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+ .information{
+    padding: 30px;
+ }
+ .information-wrapper{
+    overflow: hidden;
+ }
+ h1, h2{
+    color: var(---Very-Dark-Grayish-Blue);
+ }
+ p{
+    color: var(---Grayish-Blue);
+    font-size: 12px;
+ }
+ .info{
+    margin: 15px auto;
+ }
+ .appleton{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+ }
+ .profile{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+ }
+ .profile img{
+    width: 35px;
+    border-radius: 50px;
+ }
+ .profile h2{
+    font-size: var(---Font-size);
+ }
+ #pop-up{
+    display: none;
+}
+.chat-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(---Very-Dark-Grayish-Blue);
+    position: absolute;
+    right: -50px;
+    top: 125px;
+    gap: 13px;
+    padding: 10px 20px;
+    color: var(---white);
+    font-size: 11px;
+    border-radius: 8px;
+}
+.chat-box::after {
+    content: "";
+    border: 20px solid transparent;
+    position: absolute;
+    border-top-color: var(---Very-Dark-Grayish-Blue);
+    border-bottom: 0;
+    bottom: -15px; left: 54%;
+    margin-left: -20px;
+}
+.social-icons{
+    height: 13px;
+    cursor: pointer;
+}
+ #share{
+    background-color: var(---Light-Grayish-Blue);
+    padding: 5px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: .3s;
+ }
+ #share:hover{
+    background-color: var(---Very-Dark-Grayish-Blue);
+ }
+ .socials p{
+    font-size: 16px;
+    letter-spacing: 6px;
+ }
+.mobile-section{
+    display: none;
+ }
+ .mobile-socials{
+    display: none;
+ }
+ @media screen and (max-width: 792px){
+    .container{
+        width: 500px;
+    }
+    h1{
+        font-size: 14px;
+    }
+    .info{
+        margin: 10px auto;
+     }
+     .chat-box{
+        top: 120px;
+     }
+ }
+
+ /* mobile screen */
+
+ @media screen and (max-width: 600px){
+    .container{
+        grid-template-columns: none;
+        grid-template-rows: 1.5fr 2fr;
+        width: 400px;border-radius: 20px;
+        overflow: hidden;
+    }
+    .mobile-section{
+      display: block;
+    }
+    .information{
+        padding: 0;
+    }
+    .socials{
+        display: none;
+    }
+    h1{
+        font-size: 20px;
+        padding: 30px 30px 15px;
+    }
+    .info{
+        padding: 0px 30px;
+        font-size: 18px;
+    }
+    .mobile-appleton{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 10px;
+      justify-content: space-between;
+      padding: 15px 30px 30px;
+    }
+    #mobile-share{
+      background-color: var(---Light-Grayish-Blue);
+      padding: 5px;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: .3s;
+   }
+    .appleton{
+      display: none;
+    }
+    .mobile-socials{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        background-color: var(---Very-Dark-Grayish-Blue);
+        margin-top: 20px;
+        padding: 30px;
+        cursor: pointer;
+        display: none;
+    }
+    .mobile_icons{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        color: white;
+    }
+    .mobile_icons p{
+        font-size: 16px;
+        letter-spacing: 6px;
+    }
+    #share-mobile{
+        background-color: var(---Light-Grayish-Blue);
+        padding: 5px 7px;
+        border-radius: 50px;
+     }
+ }
+ @media screen and (max-width: 430px){
+    .container{
+        width: 350px;
+    }
+ }
